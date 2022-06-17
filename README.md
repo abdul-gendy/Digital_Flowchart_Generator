@@ -49,4 +49,6 @@ python launch_inference.py -m MODEL_PATH  -d TEST_DATA_DIRECTORY_PATH
 ```
 python launch_inference.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav"  -d ".\Digital_Flowchart_Generator\sample_shapes_dataset\test_set"
 ```
-<img src="Documentation\pictures\confusion.PNG" alt="alt text" width="400" height="400">
+<p align="center">
+  <img src="Documentation\pictures\confusion.PNG" alt="alt text" width="400" height="350">
+</p>
