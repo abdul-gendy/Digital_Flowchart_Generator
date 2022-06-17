@@ -28,9 +28,7 @@ python convert_to_digital_flowchart.py -m ".\Digital_Flowchart_Generator\classif
 </p>
 
 ##### Training a hand-drawn flowchart shapes classifier
-To train a SVM model that classifies hand-drawn shapes, you will need access to a dataset of hand-drawn shapes. The dataset should follow the directory structure of "sample_shapes_dataset" in this repo. This directory also contains some sample images from the dataset. Instructions on how to create your own dataset for this application is discussed in the video and paper found in the link below. 
-
-  - https://abdulelgendy.com/portfolio/flowchart-generator/
+To train a SVM model that classifies hand-drawn shapes, you will need access to a dataset of hand-drawn shapes. The dataset should follow the directory structure of "sample_shapes_dataset" in this repo. This directory also contains some sample images from the dataset. Instructions on how to create your own dataset for this application is discussed in the video and paper found in the following link: https://abdulelgendy.com/portfolio/flowchart-generator/ 
 ```
 python launch_training.py -d TRAINING_DATA_DIRECTORY_PATH -m MODEL_NAME -p MODEL_SAVE_PATH
 ```
