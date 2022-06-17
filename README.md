@@ -2,62 +2,50 @@
 The aim of this project is to allow the user to quickly draw a flowchart template made up of shapes and arrows in their required order on a piece of paper and then
 convert an image of that into a digital template that the user can then start working on right away. This application could be useful in many settings, especially in brainstorming sessions where individuals don’t want to spend a lot of time creating a flowchart template on a software tool.
 
+This repo allows you to do the following:
+  - Directly convert a picture of a hand-drawn flowchart to a digital version using one of the pretrained model saved on the repo
+  - Train a new hand-drawn flowchart shapes classifier 
+  - Test a trained hand-drawn flowchart shapes classifier
 
-This package helps you select the best 15 players to choose when playing a wildcard on Fantasy premier league on any given week
-
-  - Selects the best players by analyzing the latest data provided by the fantasy premier league API, and other premier league stats sources
-  - creates a visualization of the selected players
-  - creates a csv containing detailed stats on all the players available for selection
 
 ### Setup
-Install required dependencies in the requirements.txt file.
+Install all required dependencies in the requirements.txt file.
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
+
 ### Usage
 ##### converting a picture of a hand-drawn flowchart to digital
 ```
 python convert_to_digital_flowchart.py -m MODEL_PATH -i IMAGE_PATH
 ```
+##### Conversion Sample Output
+```
+python convert_to_digital_flowchart.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav" -i ".\sample_inputs\sample.jpg"
+```
+<img src="Documentation\pictures\conversion.PNG" alt="alt text" width="700" height="700">
+
 
 ##### Training a hand-drawn flowchart shapes classifier
-This function selects the best 15 players to pick and creates a visualization of the selected players. It takes in the following 4 arguments: 
+To train a SVM model that classifies hand-drawn shapes, you will need access to a dataset of hand-drawn shapes. The dataset should follow the directory structure of "sample_shapes_dataset" in this repo. This directory also contains some sample images from the dataset. Instructions on how to create your own dataset for this application is discussed in the video and paper found in the link below. 
 
-  - The amount of money that you have available. Check your team value to get an understanding of how much money you have
-  - minimum number of minutes that a player needs to have played in the PL this season for him to be considered for selection
-  - number of future gameweeks to analyze
-  - whether or not you want to account for penalties during the analysis (If False, uses non-penalty stats)
-
+  - https://abdulelgendy.com/portfolio/flowchart-generator/
 ```
 python launch_training.py -d TRAINING_DATA_DIRECTORY_PATH -m MODEL_NAME -p MODEL_SAVE_PATH
 ```
+###### sample
+```
+python launch_training.py -d ".\sample_shapes_dataset\training_set" -m "new_model" -p ".\Digital_Flowchart_Generator\classifier\models"
+```
+
 
 ##### Testing a hand-drawn flowchart shapes classifier
-This function selects the best 15 players to pick and creates a visualization of the selected players. It takes in the following 4 arguments: 
-
-  - The amount of money that you have available. Check your team value to get an understanding of how much money you have
-  - minimum number of minutes that a player needs to have played in the PL this season for him to be considered for selection
-  - number of future gameweeks to analyze
-  - whether or not you want to account for penalties during the analysis (If False, uses non-penalty stats)
-
+To test and generate metrics for a trained hand-drawn flowchart shapes classifier, run the following command: 
 ```
 python launch_inference.py -m MODEL_PATH  -d TEST_DATA_DIRECTORY_PATH
 ```
-
-##### Sample Output
-
-<img src="test/sample_outputs/Team1.PNG" alt="alt text" width="700" height="700">
-
-##### generate_player_stats function
-This functions creates a csv containing detailed stats on all the players. It splits the players in the csv based on posistion, and it places the players in every position catergory in order of best pick to worst pick based on the following 3 arguments: 
-
-  - minimum number of minutes that a player needs to have played in the PL this season for him to be added to the csv
-  - number of future gameweeks to analyze
-  - whether or not you want to account for penalties during the analysis (If False, uses non-penalty stats)
-
+###### Testing Sample Output
 ```
-FPL_wildcard_team_selector.generate_player_stats(minimum_number_of_minutes_played=900, number_of_future_games_to_analyze=3, account_for_penalties=True)
+python launch_inference.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav"  -d ".\Digital_Flowchart_Generator\sample_shapes_dataset\test_set"
 ```
-##### generate_player_stats Sample Output
-
-<img src="test/sample_outputs/sample_csv.PNG" alt="alt text" width="1400" height="500">
+<img src="Documentation\pictures\confusion.PNG" alt="alt text" width="1400" height="500">
