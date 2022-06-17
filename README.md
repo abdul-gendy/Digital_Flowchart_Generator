@@ -23,7 +23,7 @@ python convert_to_digital_flowchart.py -m MODEL_PATH -i IMAGE_PATH
 ```
 python convert_to_digital_flowchart.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav" -i ".\sample_inputs\sample.jpg"
 ```
-<img src="Documentation\pictures\conversion.PNG" alt="alt text" width="700" height="700">
+<img src="Documentation\pictures\conversion.PNG" alt="alt text" width="500" height="400">
 
 
 ##### Training a hand-drawn flowchart shapes classifier
