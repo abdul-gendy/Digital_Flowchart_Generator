@@ -50,3 +50,6 @@ python launch_inference.py -m ".\Digital_Flowchart_Generator\classifier\models\f
 <p align="center">
   <img src="Documentation\pictures\confusion.PNG" alt="alt text" width="400" height="350">
 </p>
+<p align="center">
+  <img src="Documentation\pictures\metrics.PNG" alt="alt text" width="400" height="350">
+</p>
