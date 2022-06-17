@@ -23,7 +23,7 @@ python convert_to_digital_flowchart.py -m MODEL_PATH -i IMAGE_PATH
 ```
 python convert_to_digital_flowchart.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav" -i ".\sample_inputs\sample.jpg"
 ```
-<img src="Documentation\pictures\conversion.PNG" alt="alt text" width="500" height="400">
+<img src="Documentation\pictures\conversion.PNG" alt="alt text" width="450height="350 class="center">
 
 
 ##### Training a hand-drawn flowchart shapes classifier
@@ -33,7 +33,7 @@ To train a SVM model that classifies hand-drawn shapes, you will need access to 
 ```
 python launch_training.py -d TRAINING_DATA_DIRECTORY_PATH -m MODEL_NAME -p MODEL_SAVE_PATH
 ```
-###### sample
+##### sample
 ```
 python launch_training.py -d ".\sample_shapes_dataset\training_set" -m "new_model" -p ".\Digital_Flowchart_Generator\classifier\models"
 ```
@@ -44,8 +44,8 @@ To test and generate metrics for a trained hand-drawn flowchart shapes classifie
 ```
 python launch_inference.py -m MODEL_PATH  -d TEST_DATA_DIRECTORY_PATH
 ```
-###### Testing Sample Output
+##### Testing Sample Output
 ```
 python launch_inference.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav"  -d ".\Digital_Flowchart_Generator\sample_shapes_dataset\test_set"
 ```
-<img src="Documentation\pictures\confusion.PNG" alt="alt text" width="1400" height="500">
+<img src="Documentation\pictures\confusion.PNG" alt="alt text" width="500" height="500">
