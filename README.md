@@ -1,6 +1,6 @@
 # Digital_Flowchart_Generator
 The aim of this project is to allow the user to quickly draw a flowchart template made up of shapes and arrows in their required order on a piece of paper and then
-convert an image of that into a digital template that the user can then start working on right away. This application could be useful in many settings, especially in brainstorming sessions where individuals don’t want to spend a lot of time creating a flowchart template on a software tool.
+convert an image of that into a digital template that the user can then start working on right away. This application could be useful in many settings, especially in brainstorming sessions where individuals don’t want to spend a lot of time creating a flowchart template on a software tool. The demonstration video and paper that discusses this project in depth can be found in the following link: https://abdulelgendy.com/portfolio/flowchart-generator/ 
 
 This repo allows you to do the following:
   - Directly convert a picture of a hand-drawn flowchart to a digital version using one of the pretrained model saved on the repo
