@@ -3,4 +3,5 @@ matplotlib==3.5.1
 opencv-python==4.5.5.62
 tqdm==4.64.0
 sklearn==0.0
+graphviz==0.10.1
 Flowgiston==0.1

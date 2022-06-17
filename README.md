@@ -9,10 +9,11 @@ This repo allows you to do the following:
 
 
 ### Setup
-Install all required dependencies in the requirements.txt file.
+Make sure you are using python version 3.7 before installing all required dependencies in the requirements.txt file.
 ```
 pip install -r requirements.txt
 ```
+Note: After installing the dependencies, make sure that the graphviz executables are on your system path
 
 ### Usage
 ##### converting a picture of a hand-drawn flowchart to digital
@@ -45,7 +46,7 @@ python launch_inference.py -m MODEL_PATH  -d TEST_DATA_DIRECTORY_PATH
 ```
 ##### Testing Sample Output
 ```
-python launch_inference.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav"  -d ".\Digital_Flowchart_Generator\sample_shapes_dataset\test_set"
+python launch_inference.py -m ".\Digital_Flowchart_Generator\classifier\models\flowchart_shape_classifier_v2.sav"  -d ".\sample_shapes_dataset\test_set"
 ```
 <p align="center">
   <img src="Documentation\pictures\confusion.PNG" alt="alt text" width="400" height="350">
