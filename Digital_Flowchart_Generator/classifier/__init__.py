@@ -1,0 +1,3 @@
+from .handdrawn_shapes_training import train_shapes_classifier
+from .handdrawn_shapes_inference import handdrawn_shapes_model_inference
+from .handdrawn_arrows_classifier import arrows_classifier
