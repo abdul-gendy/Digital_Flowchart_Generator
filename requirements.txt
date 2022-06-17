@@ -1,0 +1,6 @@
+numpy==1.21.5
+matplotlib==3.5.1
+opencv-python==4.5.5.62
+tqdm==4.64.0
+sklearn==0.0
+Flowgiston==0.1
